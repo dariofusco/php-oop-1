@@ -20,5 +20,6 @@ class Movie
 }
 
 $signoreDegliAnelli = new Movie('Il Signore Degli Anelli', 'Fantasy', '2002');
+$matrix = new Movie('Matrix', 'Fantascienza', '1999');
 
 ?>
