@@ -1,25 +1,25 @@
 <?php
-
+require_once __DIR__ . '/Genre.php';
 class Movie
 {
     public $title;
     public $genre;
     public $year;
 
-    public function __construct($_title, $_genre, $_year)
+    public function __construct($title, Genre $genre, $year)
     {
-        $this->title = $_title;
-        $this->genre = $_genre;
-        $this->year = $_year;
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->year = $year;
     }
 
     public function getFullDescription()
     {
-        return 'Titolo: ' . $this->title . ', Genere: ' . $this->genre . ', Anno: ' . $this->year;
+        return 'Titolo: ' . $this->title . ', Anno: ' . $this->year . ', Genere: ';
     }
 }
 
-$signoreDegliAnelli = new Movie('Il Signore Degli Anelli', 'Fantasy', '2002');
-$matrix = new Movie('Matrix', 'Fantascienza', '1999');
+$signoreDegliAnelli = new Movie('Il Signore Degli Anelli', new Genre('Fantasy', 'Azione', 'Avventura'), '2002');
+$matrix = new Movie('Matrix', new Genre('Fantascienza', 'Azione', 'Avventura'), '1999');
 
 ?>
